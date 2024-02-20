@@ -9,7 +9,7 @@ public class productController {
     private productService productservice;
     // Api to Account registration with email
     @PostMapping("product")
-    public product createAccount(@RequestBody product products) {
+    public product processpayment(@RequestBody product products) {
         return this.productservice.createProduct(products);
     }
     @PutMapping("update/product")
