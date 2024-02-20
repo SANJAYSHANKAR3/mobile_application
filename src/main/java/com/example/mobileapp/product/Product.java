@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 
 
 @Entity
-public class product {
+public class Product {
     @Id
     @GeneratedValue
     private Integer id;
@@ -15,10 +15,10 @@ public class product {
     private Double price;
     private String color;
 
-    public product() {
+    public Product() {
         super();
     }
-    public product(Integer id,String brandName, String modelName, Double price, String color) {
+    public Product(Integer id, String brandName, String modelName, Double price, String color) {
         this.brandName = brandName;
         this.modelName = modelName;
         this.price = price;

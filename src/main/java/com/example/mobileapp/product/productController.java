@@ -4,20 +4,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class productController {
+public class ProductController {
     @Autowired
-    private productService productservice;
+    private ProductService productservice;
     // Api to Account registration with email
     @PostMapping("product")
-    public product processpayment(@RequestBody product products) {
+
+
+    public Product createAccount(@RequestBody Product products) {
+
         return this.productservice.createProduct(products);
     }
     @PutMapping("update/product")
-    public product updateAccount(@RequestBody product products) {
+    public Product updateAccount(@RequestBody Product products) {
         return this.productservice.updateProduct(products);
     }
     @GetMapping("product/{id}")
-    public product getAccountById(@PathVariable("id") Integer accountId) {
+    public Product getAccountById(@PathVariable("id") Integer accountId) {
         return this.productservice.getAccountById(accountId);
     }
 

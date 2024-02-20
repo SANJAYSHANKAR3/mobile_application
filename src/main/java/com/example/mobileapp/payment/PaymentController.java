@@ -1,8 +1,9 @@
 package com.example.mobileapp.payment;
 
-import com.example.mobileapp.product.product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @RestController
 public class PaymentController {
@@ -10,15 +11,19 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping("processPayment/id")
-    public Payment createAccount(@RequestBody product products) {
-        return this.paymentService.createPayment(products);
+    public Payment processpayment(@RequestBody Payment newPayment) {
+        return this.paymentService.processpayment(newPayment);
     }
-    @PutMapping("cancelpayment/id")
-    public product updateAccount(@RequestBody product products) {
-        return this.paymentService.updateProduct(products);
+//    @PutMapping("cancelpayment/id")
+//    public Optional<Payment> cancelpayment(@RequestBody Integer id) {
+//        return this.paymentService.cancelpayment(id);
+//    }
+    @DeleteMapping("payment/{id}")
+    public Payment cancelpaymentById(@PathVariable Integer id) {
+        return this.paymentService.cancelpaymentById(id);
     }
     @GetMapping("getpayment/id")
-    public product getAccountById(@PathVariable("id") Integer accountId) {
-        return this.paymentService.getAccountById(accountId);
+    public Optional<Payment> getPaymentdetails(@PathVariable("id") Integer id) {
+        return this.paymentService.getPaymentdetails(id);
     }
 }

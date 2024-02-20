@@ -1,16 +1,20 @@
 package com.example.mobileapp.payment;
 
 import java.time.LocalDate;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-    @Entity
+
+import jakarta.persistence.*;
+
+@Entity
+    @Table(name="PAYMENT")
     public class Payment {
 
         @Id
         @GeneratedValue
+        @Column(name="ID")
         private Integer id;
+        @Column(name="TYPE")
         private String type;
+        @Column(name="PAYMENTDATE")
         private LocalDate paymentDate;
         public Payment() {
             super();

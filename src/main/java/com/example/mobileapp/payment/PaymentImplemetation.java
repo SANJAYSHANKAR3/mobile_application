@@ -13,10 +13,18 @@ public class PaymentImplemetation implements PaymentService{
         return this.paymentRepository.save(newPayment);
     }
 
+//    @Override
+//    public Optional<Payment> cancelpayment(Integer id){
+//        return this.paymentRepository.deleteById(id);
+//    }
     @Override
-    public Optional<Payment> cancelpayment(Integer id){
-        return this.paymentRepository.deleteById(id);
+    public Payment cancelpaymentById(Integer id) {
+        Optional<Payment> paymentopt = this.paymentRepository.findById(id);
+        // exception handling
+        this.paymentRepository.deleteById(id);
+        return paymentopt.get();
     }
+
 
     @Override
     public Optional<Payment> getPaymentdetails(Integer id){
