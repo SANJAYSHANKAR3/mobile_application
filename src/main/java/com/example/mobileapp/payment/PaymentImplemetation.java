@@ -30,4 +30,3 @@ public class PaymentImplemetation implements PaymentService{
     public Optional<Payment> getPaymentdetails(Integer id){
         return this.paymentRepository.findById(id);
     }
-}

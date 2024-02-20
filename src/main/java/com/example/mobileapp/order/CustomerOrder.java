@@ -4,7 +4,11 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+<<<<<<< HEAD
 import com.example.mobileapp.payment.Payment;
+=======
+import com.example.mobileapp.payment.payment;
+>>>>>>> 2a5db5ae919ad50b97eb13a9e5570e84c5cf0947
 import com.example.mobileapp.product.Product;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

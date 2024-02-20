@@ -1,6 +1,11 @@
 package com.example.mobileapp.cart;
 
 import com.example.mobileapp.product.Product;
+<<<<<<< HEAD
+=======
+import com.example.mobileapp.product.ProductService;
+
+>>>>>>> 2a5db5ae919ad50b97eb13a9e5570e84c5cf0947
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.*;

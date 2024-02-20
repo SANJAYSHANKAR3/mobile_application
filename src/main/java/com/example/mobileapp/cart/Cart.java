@@ -4,6 +4,16 @@ package com.example.mobileapp.cart;
 import java.util.ArrayList;
 import java.util.List;
 
+<<<<<<< HEAD
+=======
+
+import com.example.mobileapp.product.Product;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+
+>>>>>>> 2a5db5ae919ad50b97eb13a9e5570e84c5cf0947
 import com.example.mobileapp.product.Product;
 import jakarta.persistence.*;
 
@@ -28,12 +38,17 @@ public class Cart {
     }
 
 
+<<<<<<< HEAD
     public Cart(Integer quantity) {
         this.quantity = quantity;
     }
 
     public Cart(Integer id, List<Product> products) {
+=======
+    public Cart(Integer id, List<Product> products,Integer quantity) {
+>>>>>>> 2a5db5ae919ad50b97eb13a9e5570e84c5cf0947
         super();
+        this.quantity = quantity;
         this.id = id;
         this.products = products;
     }

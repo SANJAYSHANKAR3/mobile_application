@@ -3,6 +3,8 @@ package com.example.mobileapp.product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
 public class ProductController {
     @Autowired
@@ -20,9 +22,13 @@ public class ProductController {
         return this.productservice.updateProduct(products);
     }
     @GetMapping("product/{id}")
-    public Product getAccountById(@PathVariable("id") Integer accountId) {
-        return this.productservice.getAccountById(accountId);
+       public Optional<Product> getAccountById(@PathVariable("id") Integer productId) {
+        return this.productservice.getProductById(productId);
     }
+    @DeleteMapping("removeProduct")
+    public Product removeProduct(@RequestBody Integer productId) {
+        return this.productservice.deleteProduct(productId);
 
+    }
 
 }

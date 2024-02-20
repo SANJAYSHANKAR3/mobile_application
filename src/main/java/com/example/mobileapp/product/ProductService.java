@@ -7,7 +7,7 @@ public interface ProductService {
     Product createProduct(Product newProduct);
     Optional<Product> getProductById(Integer id);
     Product updateProduct(Product products);
+    Product deleteProduct(Integer id);
 
 
-    Product getAccountById(Integer accountId);
 }

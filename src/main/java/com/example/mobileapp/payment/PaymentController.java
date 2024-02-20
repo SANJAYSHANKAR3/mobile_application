@@ -14,7 +14,8 @@ public class PaymentController {
     public Payment processpayment(@RequestBody Payment newPayment) {
         return this.paymentService.processpayment(newPayment);
     }
-//    @PutMapping("cancelpayment/id")
+
+    //    @PutMapping("cancelpayment/id")
 //    public Optional<Payment> cancelpayment(@RequestBody Integer id) {
 //        return this.paymentService.cancelpayment(id);
 //    }
@@ -22,8 +23,10 @@ public class PaymentController {
     public Payment cancelpaymentById(@PathVariable Integer id) {
         return this.paymentService.cancelpaymentById(id);
     }
+
     @GetMapping("getpayment/id")
     public Optional<Payment> getPaymentdetails(@PathVariable("id") Integer id) {
         return this.paymentService.getPaymentdetails(id);
     }
+
 }
